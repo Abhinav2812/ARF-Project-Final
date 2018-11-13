@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity mux16to1 is port(
+	S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15: IN STD_LOGIC_VECTOR(15 downto 0);
+	sel: IN STD_LOGIC_VECTOR(3 downto 0);
+	O: STD_LOGIC_VECTOR(15 downto 0);
+);
+end entity;
+architecture behavioral of mux16to1 is
+begin
+process(S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,sel)
+begin
+	case sel is
+	when "0000" => O <= S0;
+   when "0001" => O <= S1;
+	when "0010" => O <= S2;
+   when "0011" => O <= S3;
+	when "0100" => O <= S4;
+   when "0101" => O <= S5;
+	when "0110" => O <= S6;
+   when "0111" => O <= S7;
+	when "1000" => O <= S8;
+   when "1001" => O <= S9;
+	when "1010" => O <= S10;
+   when "1011" => O <= S11;
+	when "1100" => O <= S12;
+   when "1101" => O <= S13;
+	when "1110" => O <= S14;
+   when "1111" => O <= S15;
+	end case;
+end process;
+end architecture;

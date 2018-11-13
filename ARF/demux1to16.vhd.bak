@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity demux1to16 is port(
+	S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15: IN STD_LOGIC_VECTOR(15 downto 0);
+	sel: IN STD_LOGIC_VECTOR(3 downto 0);
+	O: OUT STD_LOGIC_VECTOR(15 downto 0)
+);
+end entity;
+architecture behavioral of demux1to16 is
+begin
+process(S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,sel)
+begin
+	S0 <= "0000";
+	S1 <= "0000";
+	S2 <= "0000";
+	S3 <= "0000";
+	S4 <= "0000";
+	S5 <= "0000";
+	S6 <= "0000";
+	S7 <= "0000";
+	S8 <= "0000";
+	S9 <= "0000";
+	S10 <= "0000";
+	S11 <= "0000";
+	S12 <= "0000";
+	S13 <= "0000";
+	S14 <= "0000";
+	S15 <= "0000";	
+	case sel is
+	when "0000" => S0 <= O;
+   when "0001" => S1 <= O;
+	when "0010" => S2 <= O;
+   when "0011" => S3 <= O;
+	when "0100" => S4 <= O;
+   when "0101" => S5 <= O;
+	when "0110" => S6 <= O;
+   when "0111" => S7 <= O;
+	when "1000" => S8 <= O;
+   when "1001" => S9 <= O;
+	when "1010" => S10 <= O;
+   when "1011" => S11 <= O;
+	when "1100" => S12 <= O;
+   when "1101" => S13 <= O;
+	when "1110" => S14 <= O;
+   when "1111" => S15 <= O;
+	end case;
+end process;
+end architecture;

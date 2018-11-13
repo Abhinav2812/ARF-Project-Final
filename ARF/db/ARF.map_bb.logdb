@@ -1,0 +1,4 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,ARF:inst|mul:inst11|lpm_mult:Mult0|mult_1ht:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,ARF:inst|mul:inst17|lpm_mult:Mult0|mult_1ht:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,ARF:inst|mul:inst24|lpm_mult:Mult0|mult_1ht:auto_generated|mac_out2,

@@ -1,0 +1,2114 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/13/2018 18:48:04"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Final
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Final_vlg_sample_tst(
+	A,
+	B,
+	C,
+	CLK,
+	D,
+	E,
+	F,
+	G,
+	H,
+	I,
+	J,
+	K,
+	L,
+	M,
+	N,
+	O,
+	P,
+	sampler_tx
+);
+input [15:0] A;
+input [15:0] B;
+input [15:0] C;
+input  CLK;
+input [15:0] D;
+input [15:0] E;
+input [15:0] F;
+input [15:0] G;
+input [15:0] H;
+input [15:0] I;
+input [15:0] J;
+input [15:0] K;
+input [15:0] L;
+input [15:0] M;
+input [15:0] N;
+input [15:0] O;
+input [15:0] P;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(A or B or C or CLK or D or E or F or G or H or I or J or K or L or M or N or O or P)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Final_vlg_check_tst (
+	Y1,
+	Y2,
+	sampler_rx
+);
+input [15:0] Y1;
+input [15:0] Y2;
+input sampler_rx;
+
+reg [15:0] Y1_expected;
+reg [15:0] Y2_expected;
+
+reg [15:0] Y1_prev;
+reg [15:0] Y2_prev;
+
+reg [15:0] Y1_expected_prev;
+reg [15:0] Y2_expected_prev;
+
+reg [15:0] last_Y1_exp;
+reg [15:0] last_Y2_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:2] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 2'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	Y1_prev = Y1;
+	Y2_prev = Y2;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	Y1_expected_prev = Y1_expected;
+	Y2_expected_prev = Y2_expected;
+end
+
+
+// expected Y1[ 15 ]
+initial
+begin
+	Y1_expected[15] = 1'bX;
+end 
+// expected Y1[ 14 ]
+initial
+begin
+	Y1_expected[14] = 1'bX;
+end 
+// expected Y1[ 13 ]
+initial
+begin
+	Y1_expected[13] = 1'bX;
+end 
+// expected Y1[ 12 ]
+initial
+begin
+	Y1_expected[12] = 1'bX;
+end 
+// expected Y1[ 11 ]
+initial
+begin
+	Y1_expected[11] = 1'bX;
+end 
+// expected Y1[ 10 ]
+initial
+begin
+	Y1_expected[10] = 1'bX;
+end 
+// expected Y1[ 9 ]
+initial
+begin
+	Y1_expected[9] = 1'bX;
+end 
+// expected Y1[ 8 ]
+initial
+begin
+	Y1_expected[8] = 1'bX;
+end 
+// expected Y1[ 7 ]
+initial
+begin
+	Y1_expected[7] = 1'bX;
+end 
+// expected Y1[ 6 ]
+initial
+begin
+	Y1_expected[6] = 1'bX;
+end 
+// expected Y1[ 5 ]
+initial
+begin
+	Y1_expected[5] = 1'bX;
+end 
+// expected Y1[ 4 ]
+initial
+begin
+	Y1_expected[4] = 1'bX;
+end 
+// expected Y1[ 3 ]
+initial
+begin
+	Y1_expected[3] = 1'bX;
+end 
+// expected Y1[ 2 ]
+initial
+begin
+	Y1_expected[2] = 1'bX;
+end 
+// expected Y1[ 1 ]
+initial
+begin
+	Y1_expected[1] = 1'bX;
+end 
+// expected Y1[ 0 ]
+initial
+begin
+	Y1_expected[0] = 1'bX;
+end 
+// expected Y2[ 15 ]
+initial
+begin
+	Y2_expected[15] = 1'bX;
+end 
+// expected Y2[ 14 ]
+initial
+begin
+	Y2_expected[14] = 1'bX;
+end 
+// expected Y2[ 13 ]
+initial
+begin
+	Y2_expected[13] = 1'bX;
+end 
+// expected Y2[ 12 ]
+initial
+begin
+	Y2_expected[12] = 1'bX;
+end 
+// expected Y2[ 11 ]
+initial
+begin
+	Y2_expected[11] = 1'bX;
+end 
+// expected Y2[ 10 ]
+initial
+begin
+	Y2_expected[10] = 1'bX;
+end 
+// expected Y2[ 9 ]
+initial
+begin
+	Y2_expected[9] = 1'bX;
+end 
+// expected Y2[ 8 ]
+initial
+begin
+	Y2_expected[8] = 1'bX;
+end 
+// expected Y2[ 7 ]
+initial
+begin
+	Y2_expected[7] = 1'bX;
+end 
+// expected Y2[ 6 ]
+initial
+begin
+	Y2_expected[6] = 1'bX;
+end 
+// expected Y2[ 5 ]
+initial
+begin
+	Y2_expected[5] = 1'bX;
+end 
+// expected Y2[ 4 ]
+initial
+begin
+	Y2_expected[4] = 1'bX;
+end 
+// expected Y2[ 3 ]
+initial
+begin
+	Y2_expected[3] = 1'bX;
+end 
+// expected Y2[ 2 ]
+initial
+begin
+	Y2_expected[2] = 1'bX;
+end 
+// expected Y2[ 1 ]
+initial
+begin
+	Y2_expected[1] = 1'bX;
+end 
+// expected Y2[ 0 ]
+initial
+begin
+	Y2_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(Y1_expected or Y1 or Y2_expected or Y2)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected Y1 = %b | expected Y2 = %b | ",Y1_expected_prev,Y2_expected_prev);
+	$display("| real Y1 = %b | real Y2 = %b | ",Y1_prev,Y2_prev);
+`endif
+	if (
+		( Y1_expected_prev[0] !== 1'bx ) && ( Y1_prev[0] !== Y1_expected_prev[0] )
+		&& ((Y1_expected_prev[0] !== last_Y1_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[0] = Y1_expected_prev[0];
+	end
+	if (
+		( Y1_expected_prev[1] !== 1'bx ) && ( Y1_prev[1] !== Y1_expected_prev[1] )
+		&& ((Y1_expected_prev[1] !== last_Y1_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[1] = Y1_expected_prev[1];
+	end
+	if (
+		( Y1_expected_prev[2] !== 1'bx ) && ( Y1_prev[2] !== Y1_expected_prev[2] )
+		&& ((Y1_expected_prev[2] !== last_Y1_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[2] = Y1_expected_prev[2];
+	end
+	if (
+		( Y1_expected_prev[3] !== 1'bx ) && ( Y1_prev[3] !== Y1_expected_prev[3] )
+		&& ((Y1_expected_prev[3] !== last_Y1_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[3] = Y1_expected_prev[3];
+	end
+	if (
+		( Y1_expected_prev[4] !== 1'bx ) && ( Y1_prev[4] !== Y1_expected_prev[4] )
+		&& ((Y1_expected_prev[4] !== last_Y1_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[4] = Y1_expected_prev[4];
+	end
+	if (
+		( Y1_expected_prev[5] !== 1'bx ) && ( Y1_prev[5] !== Y1_expected_prev[5] )
+		&& ((Y1_expected_prev[5] !== last_Y1_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[5] = Y1_expected_prev[5];
+	end
+	if (
+		( Y1_expected_prev[6] !== 1'bx ) && ( Y1_prev[6] !== Y1_expected_prev[6] )
+		&& ((Y1_expected_prev[6] !== last_Y1_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[6] = Y1_expected_prev[6];
+	end
+	if (
+		( Y1_expected_prev[7] !== 1'bx ) && ( Y1_prev[7] !== Y1_expected_prev[7] )
+		&& ((Y1_expected_prev[7] !== last_Y1_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[7] = Y1_expected_prev[7];
+	end
+	if (
+		( Y1_expected_prev[8] !== 1'bx ) && ( Y1_prev[8] !== Y1_expected_prev[8] )
+		&& ((Y1_expected_prev[8] !== last_Y1_exp[8]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[8] = Y1_expected_prev[8];
+	end
+	if (
+		( Y1_expected_prev[9] !== 1'bx ) && ( Y1_prev[9] !== Y1_expected_prev[9] )
+		&& ((Y1_expected_prev[9] !== last_Y1_exp[9]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[9] = Y1_expected_prev[9];
+	end
+	if (
+		( Y1_expected_prev[10] !== 1'bx ) && ( Y1_prev[10] !== Y1_expected_prev[10] )
+		&& ((Y1_expected_prev[10] !== last_Y1_exp[10]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[10] = Y1_expected_prev[10];
+	end
+	if (
+		( Y1_expected_prev[11] !== 1'bx ) && ( Y1_prev[11] !== Y1_expected_prev[11] )
+		&& ((Y1_expected_prev[11] !== last_Y1_exp[11]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[11] = Y1_expected_prev[11];
+	end
+	if (
+		( Y1_expected_prev[12] !== 1'bx ) && ( Y1_prev[12] !== Y1_expected_prev[12] )
+		&& ((Y1_expected_prev[12] !== last_Y1_exp[12]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[12] = Y1_expected_prev[12];
+	end
+	if (
+		( Y1_expected_prev[13] !== 1'bx ) && ( Y1_prev[13] !== Y1_expected_prev[13] )
+		&& ((Y1_expected_prev[13] !== last_Y1_exp[13]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[13] = Y1_expected_prev[13];
+	end
+	if (
+		( Y1_expected_prev[14] !== 1'bx ) && ( Y1_prev[14] !== Y1_expected_prev[14] )
+		&& ((Y1_expected_prev[14] !== last_Y1_exp[14]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[14] = Y1_expected_prev[14];
+	end
+	if (
+		( Y1_expected_prev[15] !== 1'bx ) && ( Y1_prev[15] !== Y1_expected_prev[15] )
+		&& ((Y1_expected_prev[15] !== last_Y1_exp[15]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y1[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y1_expected_prev);
+		$display ("     Real value = %b", Y1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Y1_exp[15] = Y1_expected_prev[15];
+	end
+	if (
+		( Y2_expected_prev[0] !== 1'bx ) && ( Y2_prev[0] !== Y2_expected_prev[0] )
+		&& ((Y2_expected_prev[0] !== last_Y2_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[0] = Y2_expected_prev[0];
+	end
+	if (
+		( Y2_expected_prev[1] !== 1'bx ) && ( Y2_prev[1] !== Y2_expected_prev[1] )
+		&& ((Y2_expected_prev[1] !== last_Y2_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[1] = Y2_expected_prev[1];
+	end
+	if (
+		( Y2_expected_prev[2] !== 1'bx ) && ( Y2_prev[2] !== Y2_expected_prev[2] )
+		&& ((Y2_expected_prev[2] !== last_Y2_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[2] = Y2_expected_prev[2];
+	end
+	if (
+		( Y2_expected_prev[3] !== 1'bx ) && ( Y2_prev[3] !== Y2_expected_prev[3] )
+		&& ((Y2_expected_prev[3] !== last_Y2_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[3] = Y2_expected_prev[3];
+	end
+	if (
+		( Y2_expected_prev[4] !== 1'bx ) && ( Y2_prev[4] !== Y2_expected_prev[4] )
+		&& ((Y2_expected_prev[4] !== last_Y2_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[4] = Y2_expected_prev[4];
+	end
+	if (
+		( Y2_expected_prev[5] !== 1'bx ) && ( Y2_prev[5] !== Y2_expected_prev[5] )
+		&& ((Y2_expected_prev[5] !== last_Y2_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[5] = Y2_expected_prev[5];
+	end
+	if (
+		( Y2_expected_prev[6] !== 1'bx ) && ( Y2_prev[6] !== Y2_expected_prev[6] )
+		&& ((Y2_expected_prev[6] !== last_Y2_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[6] = Y2_expected_prev[6];
+	end
+	if (
+		( Y2_expected_prev[7] !== 1'bx ) && ( Y2_prev[7] !== Y2_expected_prev[7] )
+		&& ((Y2_expected_prev[7] !== last_Y2_exp[7]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[7] = Y2_expected_prev[7];
+	end
+	if (
+		( Y2_expected_prev[8] !== 1'bx ) && ( Y2_prev[8] !== Y2_expected_prev[8] )
+		&& ((Y2_expected_prev[8] !== last_Y2_exp[8]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[8] = Y2_expected_prev[8];
+	end
+	if (
+		( Y2_expected_prev[9] !== 1'bx ) && ( Y2_prev[9] !== Y2_expected_prev[9] )
+		&& ((Y2_expected_prev[9] !== last_Y2_exp[9]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[9] = Y2_expected_prev[9];
+	end
+	if (
+		( Y2_expected_prev[10] !== 1'bx ) && ( Y2_prev[10] !== Y2_expected_prev[10] )
+		&& ((Y2_expected_prev[10] !== last_Y2_exp[10]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[10] = Y2_expected_prev[10];
+	end
+	if (
+		( Y2_expected_prev[11] !== 1'bx ) && ( Y2_prev[11] !== Y2_expected_prev[11] )
+		&& ((Y2_expected_prev[11] !== last_Y2_exp[11]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[11] = Y2_expected_prev[11];
+	end
+	if (
+		( Y2_expected_prev[12] !== 1'bx ) && ( Y2_prev[12] !== Y2_expected_prev[12] )
+		&& ((Y2_expected_prev[12] !== last_Y2_exp[12]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[12] = Y2_expected_prev[12];
+	end
+	if (
+		( Y2_expected_prev[13] !== 1'bx ) && ( Y2_prev[13] !== Y2_expected_prev[13] )
+		&& ((Y2_expected_prev[13] !== last_Y2_exp[13]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[13] = Y2_expected_prev[13];
+	end
+	if (
+		( Y2_expected_prev[14] !== 1'bx ) && ( Y2_prev[14] !== Y2_expected_prev[14] )
+		&& ((Y2_expected_prev[14] !== last_Y2_exp[14]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[14] = Y2_expected_prev[14];
+	end
+	if (
+		( Y2_expected_prev[15] !== 1'bx ) && ( Y2_prev[15] !== Y2_expected_prev[15] )
+		&& ((Y2_expected_prev[15] !== last_Y2_exp[15]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y2[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y2_expected_prev);
+		$display ("     Real value = %b", Y2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Y2_exp[15] = Y2_expected_prev[15];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#2000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Final_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [15:0] A;
+reg [15:0] B;
+reg [15:0] C;
+reg CLK;
+reg [15:0] D;
+reg [15:0] E;
+reg [15:0] F;
+reg [15:0] G;
+reg [15:0] H;
+reg [15:0] I;
+reg [15:0] J;
+reg [15:0] K;
+reg [15:0] L;
+reg [15:0] M;
+reg [15:0] N;
+reg [15:0] O;
+reg [15:0] P;
+// wires                                               
+wire [15:0] Y1;
+wire [15:0] Y2;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Final i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.B(B),
+	.C(C),
+	.CLK(CLK),
+	.D(D),
+	.E(E),
+	.F(F),
+	.G(G),
+	.H(H),
+	.I(I),
+	.J(J),
+	.K(K),
+	.L(L),
+	.M(M),
+	.N(N),
+	.O(O),
+	.P(P),
+	.Y1(Y1),
+	.Y2(Y2)
+);
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #5000 1'b1;
+	#5000;
+end 
+// A[ 15 ]
+initial
+begin
+	A[15] = 1'b0;
+end 
+// A[ 14 ]
+initial
+begin
+	A[14] = 1'b0;
+end 
+// A[ 13 ]
+initial
+begin
+	A[13] = 1'b0;
+end 
+// A[ 12 ]
+initial
+begin
+	A[12] = 1'b0;
+end 
+// A[ 11 ]
+initial
+begin
+	A[11] = 1'b0;
+end 
+// A[ 10 ]
+initial
+begin
+	A[10] = 1'b0;
+end 
+// A[ 9 ]
+initial
+begin
+	A[9] = 1'b0;
+end 
+// A[ 8 ]
+initial
+begin
+	A[8] = 1'b0;
+end 
+// A[ 7 ]
+initial
+begin
+	A[7] = 1'b0;
+end 
+// A[ 6 ]
+initial
+begin
+	A[6] = 1'b0;
+end 
+// A[ 5 ]
+initial
+begin
+	A[5] = 1'b0;
+end 
+// A[ 4 ]
+initial
+begin
+	A[4] = 1'b0;
+end 
+// A[ 3 ]
+initial
+begin
+	A[3] = 1'b0;
+end 
+// A[ 2 ]
+initial
+begin
+	A[2] = 1'b0;
+end 
+// A[ 1 ]
+initial
+begin
+	A[1] = 1'b0;
+end 
+// A[ 0 ]
+initial
+begin
+	A[0] = 1'b1;
+end 
+// B[ 15 ]
+initial
+begin
+	B[15] = 1'b0;
+end 
+// B[ 14 ]
+initial
+begin
+	B[14] = 1'b0;
+end 
+// B[ 13 ]
+initial
+begin
+	B[13] = 1'b0;
+end 
+// B[ 12 ]
+initial
+begin
+	B[12] = 1'b0;
+end 
+// B[ 11 ]
+initial
+begin
+	B[11] = 1'b0;
+end 
+// B[ 10 ]
+initial
+begin
+	B[10] = 1'b0;
+end 
+// B[ 9 ]
+initial
+begin
+	B[9] = 1'b0;
+end 
+// B[ 8 ]
+initial
+begin
+	B[8] = 1'b0;
+end 
+// B[ 7 ]
+initial
+begin
+	B[7] = 1'b0;
+end 
+// B[ 6 ]
+initial
+begin
+	B[6] = 1'b0;
+end 
+// B[ 5 ]
+initial
+begin
+	B[5] = 1'b0;
+end 
+// B[ 4 ]
+initial
+begin
+	B[4] = 1'b0;
+end 
+// B[ 3 ]
+initial
+begin
+	B[3] = 1'b0;
+end 
+// B[ 2 ]
+initial
+begin
+	B[2] = 1'b0;
+end 
+// B[ 1 ]
+initial
+begin
+	B[1] = 1'b0;
+end 
+// B[ 0 ]
+initial
+begin
+	B[0] = 1'b1;
+end 
+// C[ 15 ]
+initial
+begin
+	C[15] = 1'b0;
+end 
+// C[ 14 ]
+initial
+begin
+	C[14] = 1'b0;
+end 
+// C[ 13 ]
+initial
+begin
+	C[13] = 1'b0;
+end 
+// C[ 12 ]
+initial
+begin
+	C[12] = 1'b0;
+end 
+// C[ 11 ]
+initial
+begin
+	C[11] = 1'b0;
+end 
+// C[ 10 ]
+initial
+begin
+	C[10] = 1'b0;
+end 
+// C[ 9 ]
+initial
+begin
+	C[9] = 1'b0;
+end 
+// C[ 8 ]
+initial
+begin
+	C[8] = 1'b0;
+end 
+// C[ 7 ]
+initial
+begin
+	C[7] = 1'b0;
+end 
+// C[ 6 ]
+initial
+begin
+	C[6] = 1'b0;
+end 
+// C[ 5 ]
+initial
+begin
+	C[5] = 1'b0;
+end 
+// C[ 4 ]
+initial
+begin
+	C[4] = 1'b0;
+end 
+// C[ 3 ]
+initial
+begin
+	C[3] = 1'b0;
+end 
+// C[ 2 ]
+initial
+begin
+	C[2] = 1'b0;
+end 
+// C[ 1 ]
+initial
+begin
+	C[1] = 1'b0;
+end 
+// C[ 0 ]
+initial
+begin
+	C[0] = 1'b0;
+end 
+// D[ 15 ]
+initial
+begin
+	D[15] = 1'b0;
+end 
+// D[ 14 ]
+initial
+begin
+	D[14] = 1'b0;
+end 
+// D[ 13 ]
+initial
+begin
+	D[13] = 1'b0;
+end 
+// D[ 12 ]
+initial
+begin
+	D[12] = 1'b0;
+end 
+// D[ 11 ]
+initial
+begin
+	D[11] = 1'b0;
+end 
+// D[ 10 ]
+initial
+begin
+	D[10] = 1'b0;
+end 
+// D[ 9 ]
+initial
+begin
+	D[9] = 1'b0;
+end 
+// D[ 8 ]
+initial
+begin
+	D[8] = 1'b0;
+end 
+// D[ 7 ]
+initial
+begin
+	D[7] = 1'b0;
+end 
+// D[ 6 ]
+initial
+begin
+	D[6] = 1'b0;
+end 
+// D[ 5 ]
+initial
+begin
+	D[5] = 1'b0;
+end 
+// D[ 4 ]
+initial
+begin
+	D[4] = 1'b0;
+end 
+// D[ 3 ]
+initial
+begin
+	D[3] = 1'b0;
+end 
+// D[ 2 ]
+initial
+begin
+	D[2] = 1'b0;
+end 
+// D[ 1 ]
+initial
+begin
+	D[1] = 1'b0;
+end 
+// D[ 0 ]
+initial
+begin
+	D[0] = 1'b0;
+end 
+// E[ 15 ]
+initial
+begin
+	E[15] = 1'b0;
+end 
+// E[ 14 ]
+initial
+begin
+	E[14] = 1'b0;
+end 
+// E[ 13 ]
+initial
+begin
+	E[13] = 1'b0;
+end 
+// E[ 12 ]
+initial
+begin
+	E[12] = 1'b0;
+end 
+// E[ 11 ]
+initial
+begin
+	E[11] = 1'b0;
+end 
+// E[ 10 ]
+initial
+begin
+	E[10] = 1'b0;
+end 
+// E[ 9 ]
+initial
+begin
+	E[9] = 1'b0;
+end 
+// E[ 8 ]
+initial
+begin
+	E[8] = 1'b0;
+end 
+// E[ 7 ]
+initial
+begin
+	E[7] = 1'b0;
+end 
+// E[ 6 ]
+initial
+begin
+	E[6] = 1'b0;
+end 
+// E[ 5 ]
+initial
+begin
+	E[5] = 1'b0;
+end 
+// E[ 4 ]
+initial
+begin
+	E[4] = 1'b0;
+end 
+// E[ 3 ]
+initial
+begin
+	E[3] = 1'b0;
+end 
+// E[ 2 ]
+initial
+begin
+	E[2] = 1'b0;
+end 
+// E[ 1 ]
+initial
+begin
+	E[1] = 1'b0;
+end 
+// E[ 0 ]
+initial
+begin
+	E[0] = 1'b0;
+end 
+// F[ 15 ]
+initial
+begin
+	F[15] = 1'b0;
+end 
+// F[ 14 ]
+initial
+begin
+	F[14] = 1'b0;
+end 
+// F[ 13 ]
+initial
+begin
+	F[13] = 1'b0;
+end 
+// F[ 12 ]
+initial
+begin
+	F[12] = 1'b0;
+end 
+// F[ 11 ]
+initial
+begin
+	F[11] = 1'b0;
+end 
+// F[ 10 ]
+initial
+begin
+	F[10] = 1'b0;
+end 
+// F[ 9 ]
+initial
+begin
+	F[9] = 1'b0;
+end 
+// F[ 8 ]
+initial
+begin
+	F[8] = 1'b0;
+end 
+// F[ 7 ]
+initial
+begin
+	F[7] = 1'b0;
+end 
+// F[ 6 ]
+initial
+begin
+	F[6] = 1'b0;
+end 
+// F[ 5 ]
+initial
+begin
+	F[5] = 1'b0;
+end 
+// F[ 4 ]
+initial
+begin
+	F[4] = 1'b0;
+end 
+// F[ 3 ]
+initial
+begin
+	F[3] = 1'b0;
+end 
+// F[ 2 ]
+initial
+begin
+	F[2] = 1'b0;
+end 
+// F[ 1 ]
+initial
+begin
+	F[1] = 1'b0;
+end 
+// F[ 0 ]
+initial
+begin
+	F[0] = 1'b0;
+end 
+// G[ 15 ]
+initial
+begin
+	G[15] = 1'b0;
+end 
+// G[ 14 ]
+initial
+begin
+	G[14] = 1'b0;
+end 
+// G[ 13 ]
+initial
+begin
+	G[13] = 1'b0;
+end 
+// G[ 12 ]
+initial
+begin
+	G[12] = 1'b0;
+end 
+// G[ 11 ]
+initial
+begin
+	G[11] = 1'b0;
+end 
+// G[ 10 ]
+initial
+begin
+	G[10] = 1'b0;
+end 
+// G[ 9 ]
+initial
+begin
+	G[9] = 1'b0;
+end 
+// G[ 8 ]
+initial
+begin
+	G[8] = 1'b0;
+end 
+// G[ 7 ]
+initial
+begin
+	G[7] = 1'b0;
+end 
+// G[ 6 ]
+initial
+begin
+	G[6] = 1'b0;
+end 
+// G[ 5 ]
+initial
+begin
+	G[5] = 1'b0;
+end 
+// G[ 4 ]
+initial
+begin
+	G[4] = 1'b0;
+end 
+// G[ 3 ]
+initial
+begin
+	G[3] = 1'b0;
+end 
+// G[ 2 ]
+initial
+begin
+	G[2] = 1'b0;
+end 
+// G[ 1 ]
+initial
+begin
+	G[1] = 1'b0;
+end 
+// G[ 0 ]
+initial
+begin
+	G[0] = 1'b0;
+end 
+// H[ 15 ]
+initial
+begin
+	H[15] = 1'b0;
+end 
+// H[ 14 ]
+initial
+begin
+	H[14] = 1'b0;
+end 
+// H[ 13 ]
+initial
+begin
+	H[13] = 1'b0;
+end 
+// H[ 12 ]
+initial
+begin
+	H[12] = 1'b0;
+end 
+// H[ 11 ]
+initial
+begin
+	H[11] = 1'b0;
+end 
+// H[ 10 ]
+initial
+begin
+	H[10] = 1'b0;
+end 
+// H[ 9 ]
+initial
+begin
+	H[9] = 1'b0;
+end 
+// H[ 8 ]
+initial
+begin
+	H[8] = 1'b0;
+end 
+// H[ 7 ]
+initial
+begin
+	H[7] = 1'b0;
+end 
+// H[ 6 ]
+initial
+begin
+	H[6] = 1'b0;
+end 
+// H[ 5 ]
+initial
+begin
+	H[5] = 1'b0;
+end 
+// H[ 4 ]
+initial
+begin
+	H[4] = 1'b0;
+end 
+// H[ 3 ]
+initial
+begin
+	H[3] = 1'b0;
+end 
+// H[ 2 ]
+initial
+begin
+	H[2] = 1'b0;
+end 
+// H[ 1 ]
+initial
+begin
+	H[1] = 1'b0;
+end 
+// H[ 0 ]
+initial
+begin
+	H[0] = 1'b0;
+end 
+// I[ 15 ]
+initial
+begin
+	I[15] = 1'b0;
+end 
+// I[ 14 ]
+initial
+begin
+	I[14] = 1'b0;
+end 
+// I[ 13 ]
+initial
+begin
+	I[13] = 1'b0;
+end 
+// I[ 12 ]
+initial
+begin
+	I[12] = 1'b0;
+end 
+// I[ 11 ]
+initial
+begin
+	I[11] = 1'b0;
+end 
+// I[ 10 ]
+initial
+begin
+	I[10] = 1'b0;
+end 
+// I[ 9 ]
+initial
+begin
+	I[9] = 1'b0;
+end 
+// I[ 8 ]
+initial
+begin
+	I[8] = 1'b0;
+end 
+// I[ 7 ]
+initial
+begin
+	I[7] = 1'b0;
+end 
+// I[ 6 ]
+initial
+begin
+	I[6] = 1'b0;
+end 
+// I[ 5 ]
+initial
+begin
+	I[5] = 1'b0;
+end 
+// I[ 4 ]
+initial
+begin
+	I[4] = 1'b0;
+end 
+// I[ 3 ]
+initial
+begin
+	I[3] = 1'b0;
+end 
+// I[ 2 ]
+initial
+begin
+	I[2] = 1'b0;
+end 
+// I[ 1 ]
+initial
+begin
+	I[1] = 1'b0;
+end 
+// I[ 0 ]
+initial
+begin
+	I[0] = 1'b0;
+end 
+// J[ 15 ]
+initial
+begin
+	J[15] = 1'b0;
+end 
+// J[ 14 ]
+initial
+begin
+	J[14] = 1'b0;
+end 
+// J[ 13 ]
+initial
+begin
+	J[13] = 1'b0;
+end 
+// J[ 12 ]
+initial
+begin
+	J[12] = 1'b0;
+end 
+// J[ 11 ]
+initial
+begin
+	J[11] = 1'b0;
+end 
+// J[ 10 ]
+initial
+begin
+	J[10] = 1'b0;
+end 
+// J[ 9 ]
+initial
+begin
+	J[9] = 1'b0;
+end 
+// J[ 8 ]
+initial
+begin
+	J[8] = 1'b0;
+end 
+// J[ 7 ]
+initial
+begin
+	J[7] = 1'b0;
+end 
+// J[ 6 ]
+initial
+begin
+	J[6] = 1'b0;
+end 
+// J[ 5 ]
+initial
+begin
+	J[5] = 1'b0;
+end 
+// J[ 4 ]
+initial
+begin
+	J[4] = 1'b0;
+end 
+// J[ 3 ]
+initial
+begin
+	J[3] = 1'b0;
+end 
+// J[ 2 ]
+initial
+begin
+	J[2] = 1'b0;
+end 
+// J[ 1 ]
+initial
+begin
+	J[1] = 1'b0;
+end 
+// J[ 0 ]
+initial
+begin
+	J[0] = 1'b0;
+end 
+// K[ 15 ]
+initial
+begin
+	K[15] = 1'b0;
+end 
+// K[ 14 ]
+initial
+begin
+	K[14] = 1'b0;
+end 
+// K[ 13 ]
+initial
+begin
+	K[13] = 1'b0;
+end 
+// K[ 12 ]
+initial
+begin
+	K[12] = 1'b0;
+end 
+// K[ 11 ]
+initial
+begin
+	K[11] = 1'b0;
+end 
+// K[ 10 ]
+initial
+begin
+	K[10] = 1'b0;
+end 
+// K[ 9 ]
+initial
+begin
+	K[9] = 1'b0;
+end 
+// K[ 8 ]
+initial
+begin
+	K[8] = 1'b0;
+end 
+// K[ 7 ]
+initial
+begin
+	K[7] = 1'b0;
+end 
+// K[ 6 ]
+initial
+begin
+	K[6] = 1'b0;
+end 
+// K[ 5 ]
+initial
+begin
+	K[5] = 1'b0;
+end 
+// K[ 4 ]
+initial
+begin
+	K[4] = 1'b0;
+end 
+// K[ 3 ]
+initial
+begin
+	K[3] = 1'b0;
+end 
+// K[ 2 ]
+initial
+begin
+	K[2] = 1'b0;
+end 
+// K[ 1 ]
+initial
+begin
+	K[1] = 1'b0;
+end 
+// K[ 0 ]
+initial
+begin
+	K[0] = 1'b0;
+end 
+// L[ 15 ]
+initial
+begin
+	L[15] = 1'b0;
+end 
+// L[ 14 ]
+initial
+begin
+	L[14] = 1'b0;
+end 
+// L[ 13 ]
+initial
+begin
+	L[13] = 1'b0;
+end 
+// L[ 12 ]
+initial
+begin
+	L[12] = 1'b0;
+end 
+// L[ 11 ]
+initial
+begin
+	L[11] = 1'b0;
+end 
+// L[ 10 ]
+initial
+begin
+	L[10] = 1'b0;
+end 
+// L[ 9 ]
+initial
+begin
+	L[9] = 1'b0;
+end 
+// L[ 8 ]
+initial
+begin
+	L[8] = 1'b0;
+end 
+// L[ 7 ]
+initial
+begin
+	L[7] = 1'b0;
+end 
+// L[ 6 ]
+initial
+begin
+	L[6] = 1'b0;
+end 
+// L[ 5 ]
+initial
+begin
+	L[5] = 1'b0;
+end 
+// L[ 4 ]
+initial
+begin
+	L[4] = 1'b0;
+end 
+// L[ 3 ]
+initial
+begin
+	L[3] = 1'b0;
+end 
+// L[ 2 ]
+initial
+begin
+	L[2] = 1'b0;
+end 
+// L[ 1 ]
+initial
+begin
+	L[1] = 1'b0;
+end 
+// L[ 0 ]
+initial
+begin
+	L[0] = 1'b0;
+end 
+// M[ 15 ]
+initial
+begin
+	M[15] = 1'b0;
+end 
+// M[ 14 ]
+initial
+begin
+	M[14] = 1'b0;
+end 
+// M[ 13 ]
+initial
+begin
+	M[13] = 1'b0;
+end 
+// M[ 12 ]
+initial
+begin
+	M[12] = 1'b0;
+end 
+// M[ 11 ]
+initial
+begin
+	M[11] = 1'b0;
+end 
+// M[ 10 ]
+initial
+begin
+	M[10] = 1'b0;
+end 
+// M[ 9 ]
+initial
+begin
+	M[9] = 1'b0;
+end 
+// M[ 8 ]
+initial
+begin
+	M[8] = 1'b0;
+end 
+// M[ 7 ]
+initial
+begin
+	M[7] = 1'b0;
+end 
+// M[ 6 ]
+initial
+begin
+	M[6] = 1'b0;
+end 
+// M[ 5 ]
+initial
+begin
+	M[5] = 1'b0;
+end 
+// M[ 4 ]
+initial
+begin
+	M[4] = 1'b0;
+end 
+// M[ 3 ]
+initial
+begin
+	M[3] = 1'b0;
+end 
+// M[ 2 ]
+initial
+begin
+	M[2] = 1'b0;
+end 
+// M[ 1 ]
+initial
+begin
+	M[1] = 1'b0;
+end 
+// M[ 0 ]
+initial
+begin
+	M[0] = 1'b0;
+end 
+// N[ 15 ]
+initial
+begin
+	N[15] = 1'b0;
+end 
+// N[ 14 ]
+initial
+begin
+	N[14] = 1'b0;
+end 
+// N[ 13 ]
+initial
+begin
+	N[13] = 1'b0;
+end 
+// N[ 12 ]
+initial
+begin
+	N[12] = 1'b0;
+end 
+// N[ 11 ]
+initial
+begin
+	N[11] = 1'b0;
+end 
+// N[ 10 ]
+initial
+begin
+	N[10] = 1'b0;
+end 
+// N[ 9 ]
+initial
+begin
+	N[9] = 1'b0;
+end 
+// N[ 8 ]
+initial
+begin
+	N[8] = 1'b0;
+end 
+// N[ 7 ]
+initial
+begin
+	N[7] = 1'b0;
+end 
+// N[ 6 ]
+initial
+begin
+	N[6] = 1'b0;
+end 
+// N[ 5 ]
+initial
+begin
+	N[5] = 1'b0;
+end 
+// N[ 4 ]
+initial
+begin
+	N[4] = 1'b0;
+end 
+// N[ 3 ]
+initial
+begin
+	N[3] = 1'b0;
+end 
+// N[ 2 ]
+initial
+begin
+	N[2] = 1'b0;
+end 
+// N[ 1 ]
+initial
+begin
+	N[1] = 1'b0;
+end 
+// N[ 0 ]
+initial
+begin
+	N[0] = 1'b0;
+end 
+// O[ 15 ]
+initial
+begin
+	O[15] = 1'b0;
+end 
+// O[ 14 ]
+initial
+begin
+	O[14] = 1'b0;
+end 
+// O[ 13 ]
+initial
+begin
+	O[13] = 1'b0;
+end 
+// O[ 12 ]
+initial
+begin
+	O[12] = 1'b0;
+end 
+// O[ 11 ]
+initial
+begin
+	O[11] = 1'b0;
+end 
+// O[ 10 ]
+initial
+begin
+	O[10] = 1'b0;
+end 
+// O[ 9 ]
+initial
+begin
+	O[9] = 1'b0;
+end 
+// O[ 8 ]
+initial
+begin
+	O[8] = 1'b0;
+end 
+// O[ 7 ]
+initial
+begin
+	O[7] = 1'b0;
+end 
+// O[ 6 ]
+initial
+begin
+	O[6] = 1'b0;
+end 
+// O[ 5 ]
+initial
+begin
+	O[5] = 1'b0;
+end 
+// O[ 4 ]
+initial
+begin
+	O[4] = 1'b0;
+end 
+// O[ 3 ]
+initial
+begin
+	O[3] = 1'b0;
+end 
+// O[ 2 ]
+initial
+begin
+	O[2] = 1'b0;
+end 
+// O[ 1 ]
+initial
+begin
+	O[1] = 1'b0;
+end 
+// O[ 0 ]
+initial
+begin
+	O[0] = 1'b0;
+end 
+// P[ 15 ]
+initial
+begin
+	P[15] = 1'b0;
+end 
+// P[ 14 ]
+initial
+begin
+	P[14] = 1'b0;
+end 
+// P[ 13 ]
+initial
+begin
+	P[13] = 1'b0;
+end 
+// P[ 12 ]
+initial
+begin
+	P[12] = 1'b0;
+end 
+// P[ 11 ]
+initial
+begin
+	P[11] = 1'b0;
+end 
+// P[ 10 ]
+initial
+begin
+	P[10] = 1'b0;
+end 
+// P[ 9 ]
+initial
+begin
+	P[9] = 1'b0;
+end 
+// P[ 8 ]
+initial
+begin
+	P[8] = 1'b0;
+end 
+// P[ 7 ]
+initial
+begin
+	P[7] = 1'b0;
+end 
+// P[ 6 ]
+initial
+begin
+	P[6] = 1'b0;
+end 
+// P[ 5 ]
+initial
+begin
+	P[5] = 1'b0;
+end 
+// P[ 4 ]
+initial
+begin
+	P[4] = 1'b0;
+end 
+// P[ 3 ]
+initial
+begin
+	P[3] = 1'b0;
+end 
+// P[ 2 ]
+initial
+begin
+	P[2] = 1'b0;
+end 
+// P[ 1 ]
+initial
+begin
+	P[1] = 1'b0;
+end 
+// P[ 0 ]
+initial
+begin
+	P[0] = 1'b0;
+end 
+
+Final_vlg_sample_tst tb_sample (
+	.A(A),
+	.B(B),
+	.C(C),
+	.CLK(CLK),
+	.D(D),
+	.E(E),
+	.F(F),
+	.G(G),
+	.H(H),
+	.I(I),
+	.J(J),
+	.K(K),
+	.L(L),
+	.M(M),
+	.N(N),
+	.O(O),
+	.P(P),
+	.sampler_tx(sampler)
+);
+
+Final_vlg_check_tst tb_out(
+	.Y1(Y1),
+	.Y2(Y2),
+	.sampler_rx(sampler)
+);
+endmodule
+
